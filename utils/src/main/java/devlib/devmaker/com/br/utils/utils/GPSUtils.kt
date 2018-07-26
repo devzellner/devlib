@@ -1,5 +1,6 @@
 package devlib.devmaker.com.br.utils.utils
 
+import android.app.Activity
 import android.content.Context
 import android.location.Address
 import android.location.Geocoder
@@ -13,7 +14,7 @@ import java.io.IOException
  * @param context contexto para iniciar o geocoder.
  * @return
  */
-fun getLocalizacao(endereco: String, context: Context): LatLng? {
+fun Activity.getLocalizacao(endereco: String, context: Context): LatLng? {
 
     val geocoder = Geocoder(context)
     val address: List<Address>?
